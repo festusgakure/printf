@@ -23,14 +23,14 @@ int p_dec(va_list args)
 		num = num / 10;
 		if (num == 0)
 			break;
-			i++;
+		i++;
 	}
 
 
 	for (i = i; i >= 0; i--)
 	{
 		y[0] = ('0' + arr[i]);
-		cntr + = write(1, y, 1);
+		cntr += write(1, y, 1);
 	}
 
 	return (cntr);
