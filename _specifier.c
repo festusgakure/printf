@@ -15,6 +15,8 @@ int (*_specifier(const char *format))(va_list)
 		{"c", p_char},
 		{"s", p_str},
 		{"%", p_cent},
+		{"i", p_int},
+		{"d", p_dec},
 		{NULL, NULL}};
 
 	for (i = 0; arr[i].comp != NULL; i++)
