@@ -13,26 +13,23 @@
 
 int _printf(const char *format, ...)
 {
-	int i = 0;
-	int cntr = 0;
-	int val = 0;
+	int i = 0, val = 0, cntr = 0;
 	va_list args;
+
 	va_start(args, format);
 	int (*p)(va_list);
 
 	if (format == NULL)
 		return (-1);
-
 	while (format[i])
-	{	
+	{
 		if (format[i] != '%')
 		{
-			val = write(1,&format[i],1);
+			val = write(1, &format[i], 1);
 			cntr = cntr + val;
 			i++;
 			continue;
 		}
-
 		if (format[i] == '%')
 		{
 			p = _specifier(&format[i + 1]);
@@ -43,23 +40,16 @@ int _printf(const char *format, ...)
 				i = i + 2;
 				continue;
 			}
-
 			if (format[i + 1] == '\0')
-			{
-				break;
-			}
-
+			break;
 			if (format[i + 1] != '\0')
 			{
 				val = write(1, &format[i + 1], 1);
 				cntr = cntr + val;
-                        	i = i + 2;
-                        	continue;
+				i = i + 2;
+				continue;
 			}
-
-
 		}
 	}
-
 	return (cntr);
 }
