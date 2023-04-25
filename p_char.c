@@ -7,14 +7,14 @@
  * Return: number of characters printed
  */
 
-int print_char(va_list args)
+int p_char(va_list args)
 {
 	char x = (char)va_arg(args, int);
 	int cntr = 0;
 
 	if (x)
 	{
-		count = write(1, &x, 1);
+		cntr = write(1, &x, 1);
 		return (cntr);
 	}
 

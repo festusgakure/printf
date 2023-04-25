@@ -15,9 +15,9 @@ int _printf(const char *format, ...)
 {
 	int i = 0, val = 0, cntr = 0;
 	va_list args;
+	int (*p)(va_list);
 
 	va_start(args, format);
-	int (*p)(va_list);
 
 	if (format == NULL)
 		return (-1);

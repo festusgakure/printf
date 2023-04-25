@@ -22,5 +22,5 @@ int p_str(va_list args)
 		i = i + 1;
 	}
 
-	return (cntr)
+	return (cntr);
 }
