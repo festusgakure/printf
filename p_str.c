@@ -8,7 +8,7 @@
 
 int p_str(va_list args)
 {
-	int i;
+	int i = 0;
 	int cntr = 0;
 	char *str;
 
@@ -18,7 +18,7 @@ int p_str(va_list args)
 
 	while (str[i])
 	{
-		cntr = write(1, &str[i], 1);
+		cntr += write(1, &str[i], 1);
 		i = i + 1;
 	}
 
