@@ -17,6 +17,11 @@ int p_int(va_list args)
 
 	num = va_arg(args, int);
 
+	if (num < 0)
+	{
+		cntr += write(1, "-", 1);
+		num = -num;
+	}
 	while (num != 0)
 	{
 		arr[i] = (num % 10);
