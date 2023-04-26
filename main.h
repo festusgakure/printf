@@ -26,5 +26,6 @@ int p_str(va_list);
 int p_cent(va_list);
 int p_int(va_list);
 int p_dec(va_list);
-int u_unsigned(va_list);
+int p_unsigned(va_list);
+int p_octal(va_list args)
 #endif
