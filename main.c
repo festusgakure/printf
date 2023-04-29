@@ -1,36 +1,8 @@
-<<<<<<< HEAD
-#include <unistd.h>
-=======
 #include <limits.h>
->>>>>>> 4609b2e60744570ba7c4e3f7d14e44d51fa30fa5
 #include <stdio.h>
 #include "main.h"
 
 /**
-<<<<<<< HEAD
- * main - test file
- * Program starts execution from here
- *
- * Return: always 0
- */
-
-int main(void)
-{
-	int count_std = 0;
-	int count_hmd = 0;
-
-	write(1,"STANDARD:\n",10);
-	count_std = printf("My number is %d\n", 123);
-	printf("I printed %d characters\n", count_std);
-
-	write(1,"________________________\n",25);
-
-	write(1,"HOME_MADE:\n",11);
-	count_hmd = _printf("My number is %d\n", 123);
-	printf("I printed %d characters\n", count_hmd);
-
-	return (0);
-=======
  * main - Entry point
  *
  * Return: Always 0
@@ -69,5 +41,4 @@ int main(void)
     _printf("Unknown:[%r]\n");
     printf("Unknown:[%r]\n");
     return (0);
->>>>>>> 4609b2e60744570ba7c4e3f7d14e44d51fa30fa5
 }

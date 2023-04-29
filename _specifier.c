@@ -11,7 +11,7 @@ int (*_specifier(const char *format))(va_list)
 {
 	int i;
 
-	fn_comp arr[6] = {
+	fn_comp arr[8] = {
 		{"c", p_char},
 		{"s", p_str},
 		{"%", p_cent},
